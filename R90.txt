@@ -1,0 +1,60 @@
+import java.util.Scanner;
+class R90
+{
+    int a[][];
+    int b[][];
+    int m;
+    static Scanner sc=new Scanner(System.in);
+
+    void accept()
+    {
+        System.out.println("Enter the value of m");
+        m=sc.nextInt();
+        if (m<2 || m>20)
+        {
+            System.out.println("Size out of range");
+            System.exit(0);
+        }
+        a=new int[m][m];
+        b=new int[m][m];
+    }
+
+    void acceptData()
+    {
+        for (int i=0;i<m;i++)
+        {
+            for (int j=0;j<m;j++)
+            {
+                a[i][j]=sc.nextInt();
+            }
+        }
+    }
+
+    void rotate90()
+    {
+        for (int i=0;i<m;i++)
+        {
+            System.out.println();
+            for (int j=0;j<m;j++)
+                System.out.print(a[i][j]+"\t");
+        }
+        
+        System.out.println("\n\n\n ROTATED MATRIX \n");
+        for (int j=0;j<m;j++)
+        {
+            
+            for (int i=m-1;i>=0;i--)
+                System.out.print(a[i][j]+"\t");
+                System.out.println();
+        }
+    }
+
+    public static void main()
+    {
+        R90 obj=new R90();
+        obj.accept();
+        obj.acceptData();
+        obj.rotate90();
+    }
+}
+
