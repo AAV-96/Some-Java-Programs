@@ -1,0 +1,83 @@
+import java.util.Scanner;
+class Mirror_Matrix
+{
+    int a[][];
+    int b[][];
+    int m;
+    static Scanner sc=new Scanner(System.in);
+
+    void accept()
+    {
+        System.out.println("Enter the value of m");
+        m=sc.nextInt();
+        if (m<2 || m>20)
+        {
+            System.out.println("Size out of range");
+            System.exit(0);
+        }
+        a=new int[m][m];
+        b=new int[m][m];
+    }
+
+    void acceptData()
+    {
+        for (int i=0;i<m;i++)
+        {
+            for (int j=0;j<m;j++)
+            {
+                a[i][j]=sc.nextInt();
+            }
+        }
+    }
+
+    void logic()
+    {
+        for (int i=0;i<m;i++)
+        {
+            for (int j=0;j<m;j++)
+            {
+                b[i][j]=a[i][m-j-1];
+            }
+        }
+    }
+
+    void display()
+    {
+        System.out.println("ORIGINAL MATRIX");
+        for (int i=0;i<m;i++)
+        {
+            for (int j=0;j<m;j++)
+            {
+                 
+                System.out.print(a[i][j] + "\t");
+            }
+            System.out.println();
+        }
+        
+    }
+    void disp()
+    {
+        System.out.println();
+         System.out.println("MIRROR MATRIX");
+        for (int i=0;i<m;i++)
+        {
+            for (int j=0;j<m;j++)
+            {
+                
+                System.out.print(b[i][j]+ "\t");
+            }
+        System.out.println();}
+    }
+
+    public static void main(String args[])
+    {
+        Mirror_Matrix obj=new Mirror_Matrix();
+        obj.accept();
+        obj.acceptData();
+        obj.logic();
+        obj.display();
+        obj.disp();
+    }
+}
+
+     
