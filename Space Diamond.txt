@@ -86,3 +86,25 @@ class PreBoard
         obj.m1();
     }
 }
+
+/* Sample Input:
+MALAYALAM
+Sample Output:
+MALAYALAMALAYALAM
+MALAYALA ALAYALAM
+MALAYAL   LAYALAM
+MALAYA     AYALAM
+MALAY       YALAM
+MALA         ALAM
+MAL           LAM
+MA             AM
+M               M
+MA             AM
+MAL           LAM
+MALA         ALAM
+MALAY       YALAM
+MALAYA     AYALAM
+MALAYAL   LAYALAM
+MALAYALA ALAYALAM
+MALAYALAMALAYALAM
+*/
